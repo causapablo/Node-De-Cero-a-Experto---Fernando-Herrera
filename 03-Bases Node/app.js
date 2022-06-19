@@ -16,3 +16,4 @@ crearArchivoTabla(argv.base, argv.listar, argv.hasta)
     .catch(error => console.log(error));
 
 //Tarea agregar un parametro h, que sea hasta, la multiplicacion se va a realizar hasta el valor h. 
+//cambios a guardar.
