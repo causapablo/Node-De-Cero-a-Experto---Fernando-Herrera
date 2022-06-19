@@ -1,5 +1,6 @@
 const fs = require('fs');
-const crearArchivoTabla = async (base = 1) => {
+const colors = require('colors');
+const crearArchivoTabla = async (base, listar) => {
 
     /* let newFile = new Promise((resolve, reject) => {
         console.log("=========================");
@@ -18,17 +19,21 @@ const crearArchivoTabla = async (base = 1) => {
     return newFile; */
     try {
         console.log("=========================");
-        console.log(`Tabla del ${base}`);
+        console.log(`Tabla del ${base}.txt`.underline.green);
         console.log("=========================");
 
         let salida = "";
         for (let i = 0; i < 11; i++) {
             salida += (`${base} X ${i} = ${base * i}\n`);
         }
+        if(listar){
+            console.log(salida.cyan);
+        }
+        
         
         fs.writeFileSync(`tabla-${base}.txt`, salida);
 
-        return (`table-${base}`);
+        return (`table-${base}.txt`);
     } catch (error) {
         throw new Error("No se pudo crear el archivo");
     }
