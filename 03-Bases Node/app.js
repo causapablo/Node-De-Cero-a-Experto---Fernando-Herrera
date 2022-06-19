@@ -11,6 +11,8 @@ console.log("Process.argv",process.argv); */
 
 /* console.log("argv", argv);
 console.log("La base de yargs es : ", argv.base); */
-crearArchivoTabla(argv.base, argv.listar)
+crearArchivoTabla(argv.base, argv.listar, argv.hasta)
     .then(archivo => console.log(colors.rainbow(archivo), "Created and saved Successfuly".underline.magenta))
     .catch(error => console.log(error));
+
+//Tarea agregar un parametro h, que sea hasta, la multiplicacion se va a realizar hasta el valor h. 
